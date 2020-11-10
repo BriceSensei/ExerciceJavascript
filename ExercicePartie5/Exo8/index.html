@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 5</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="justify-content-center">
+      <div class="col-4 b_green d-flex align-items-center justify-content-center text-center">
+        <div>
+          <form id="parentForm">
+            <p class="h5 mb-3">Entrer vos informations personnelles</p>
+            <div id="houleNode">
+              <div id="name0" class="form-groupd mt-1">
+                <label for="pwd_a">Prénom:</label>
+                <input type="text" id="firstName" class="form-control" onfocus="changeBorder(id)"
+                  onblur="changeBorder(id)" placeholder="Entrer votre prénom">
+              </div>
+              <div id="age0" class="form-groupd mt-1">
+                <label for="pwd_b">Âge:</label>
+                <input type="text" id="age" class="form-control" placeholder="Entrer votre âge">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div>
+          <input id="btnTxt" type="button" class="btn btn-primary mt-3" value="+" onclick="duplicateDiv()">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
