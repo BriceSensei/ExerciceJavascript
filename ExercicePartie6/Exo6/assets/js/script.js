@@ -1,8 +1,17 @@
-function addBorder(element) {
-    element.style.border ='4px solid red';
+let firstNumber = 8;
+let secondNumber = 2;
+let result = 0;
+
+let listeNumber = document.getElementById("liste");
+
+function brice() {
+    result = firstNumber / secondNumber;
+    firstNumber = result;
+    return result;
 }
 
-function removeBorder(element) {
-    element.style.border = '1px solid black'
+while (brice() > 1) {
+    listeNumber.innerHTML += `<li>${result}</li>`;
+    console.log(result);
 }
 

@@ -1,37 +1,16 @@
-function changerCouleur(value) {
+let firstNumber = 5;
+let secondNumber = 6;
+let result = 0;
 
-    let texte = document.getElementById("texte");
+let listeNumber = document.getElementById("liste");
 
-    // document.getElementById("texte").style.color = `${value}`;
-    // (if et else pour remettre le texte d'origine)
-
-    if (texte.style.color == value) {
-        texte.style.color = 'initial';
-    } else {
-        texte.style.color = value;
-    }
+function brice() {
+    result = firstNumber * secondNumber;
+    secondNumber = result;
+    return result;
 }
 
-function gras() {
-
-    let texte = document.getElementById("texte");
-
-    if (texte.style.fontWeight == 'bold') {
-        texte.style.fontWeight = 'normal';
-    } else {
-        texte.style.fontWeight = 'bold';
-    }
-
-}
-
-function ita() {
-
-    let texte = document.getElementById("texte");
-
-    if (texte.style.fontStyle == 'italic') {
-        texte.style.fontStyle = 'normal';
-    } else {
-        texte.style.fontStyle = 'italic';
-    }
-
+while (brice() < 250) {
+    listeNumber.innerHTML += `<li>${result}</li>`;
+    console.log(result);
 }

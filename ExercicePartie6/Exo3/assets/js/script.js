@@ -1,34 +1,11 @@
-function Name() {
-    let name = document.getElementById("name");
-    let regexname = new RegExp(/^[A-Za-z]+$/);
+let languages = ['html', 'css', 'javascript', 'php', 'mysql', 'c++', 'ruby', 'python'];
 
-    if (regexname.test(name.value)){
-        name.style.borderColor = "green";
-        document.getElementById = "(errorName)" 
-    }
-    else {
-        name.style.borderColor = "red";
-    } 
-}
-function Age() {
-    let age = document.getElementById("age");
-    let regexage = new RegExp(/^[0-9-/]+$/);
+const mikeTbody = document.getElementById("mikeTbody");
 
-    if (regexage.test(age.value)){
-        age.style.borderColor = "green";
-    }
-    else {
-        age.style.borderColor = "red";
-    } 
-}
-function Mail() {
-    let mail = document.getElementById("mail");
-    let regexmail = new RegExp(/^[A-Za-z0-9-_.@*!,;?]+$/);
+languages.forEach(Element => {
 
-    if (regexmail.test(mail.value)){
-        mail.style.borderColor = "green";
-    }
-    else {
-        mail.style.borderColor = "red";
-    } 
-}
+    let mikeTr = document.createElement("tr");
+    mikeTr.innerHTML = `<td>${Element}</td>`;
+    mikeTbody.appendChild(mikeTr)
+
+});
