@@ -1,17 +1,22 @@
-let firstNumber = 8;
-let secondNumber = 2;
-let result = 0;
+let fristParagraph = document.getElementById ("fristParagraph");
+let secondParagraph = document.getElementById ("secondParagraph");
+let paragraphs = document.getElementById("p");
+let paragraphArray = [...paragraphs];
 
-let listeNumber = document.getElementById("liste");
-
-function brice() {
-    result = firstNumber / secondNumber;
-    firstNumber = result;
-    return result;
+window.onscroll = () => {
+paragraphArray.forEach(Element => {
+    if (window.scrollY >= Element.getBoundingClientRect().top) {
+        Element.style.visibility = 'visible';
+    }
+    });
 }
 
-while (brice() > 1) {
-    listeNumber.innerHTML += `<li>${result}</li>`;
-    console.log(result);
-}
+// window.onscroll = function () {
+//     if (window.scrollY) >= fristParagraph.getBoundingClientRect().top) {
+//         fristParagraph.style.visibility = "visible";
+//     }
+//     if (window.scrollY) >= secondParagraph.getBoundingClientRect().top) {
+//         secondParagraph.style.visibility = "visible";
+//     }
+// };
 

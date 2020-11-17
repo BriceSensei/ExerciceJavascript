@@ -1,17 +1,27 @@
-let firstNumber = 8;
-let secondNumber = 2;
-let result = 0;
+const arrayA = document.querySelectorAll("li a");
 
-let listeNumber = document.getElementById("liste");
 
-function brice() {
-    result = firstNumber / secondNumber;
-    firstNumber = result;
-    return result;
-}
+// sans la boucle 
+// arrayA[0].onclick = function(event) {
+// event.preventDefault();
+// fable1.scrollIntoView({
+// 	behavior: "smooth"
+// 	});
+// }
+// arrayA[1].onclick = function(event) {
+// 	event.preventDefault();
+// 	fable2.scrollIntoView({
+// 		behavior: "smooth"
+// 		});
+// 	}
 
-while (brice() > 1) {
-    listeNumber.innerHTML += `<li>${result}</li>`;
-    console.log(result);
-}
+// Avec la boucle
 
+
+arrayA.forEach(element => element.onclick = function(event) {
+	event.preventDefault();
+
+	document.querySelector(this.getAttribute("href")).scrollIntoView({
+		behavior: "smooth"
+	});
+});
